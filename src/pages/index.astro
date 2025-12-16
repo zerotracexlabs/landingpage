@@ -4,134 +4,133 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Steps from '~/components/widgets/Steps.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'ZeroTraceX',
+  title: 'ZeroTraceX | VAPT & Penetration Testing',
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero -->
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Get a free initial scan',
+        href: '#contact',
+        icon: 'tabler:shield-check',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'See our testing approach', href: '#approach' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'ZeroTraceX Security Testing' }}
   >
     <Fragment slot="title">
-      
-      <span class="text-accent dark:text-white">ZeroTraceX</span> + - If your software can be exploited, it will be.
+      <span class="text-accent dark:text-white">ZeroTraceX</span>
+      — If it can be exploited, it will be.
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+        We help startups and growing teams secure <span class="font-semibold">websites</span>, <span class="font-semibold">APIs</span>,
+        and <span class="font-semibold">mobile apps</span> with practical penetration testing and vulnerability assessments.
+        Clear findings. Prioritized fixes. No noise.
+      </span>
+      <span class="block sm:hidden">
+        VAPT for web, API, and mobile—clear findings and actionable fixes.
+      </span>
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Note -->
+  <Note
+    title="What we optimize for"
+    description="Affordable and transparent offensive security testing—focused on exploitable risk and realistic remediation."
+  />
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
-
-  <!-- Features Widget *************** -->
-
+  <!-- Services / Features -->
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    tagline="Services"
+    title="What we test"
+    subtitle="Coverage designed for modern products—SaaS, e-commerce, and mobile-first companies."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Web Application Penetration Testing',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Manual + tool-assisted testing for auth flows, access control, business logic, and common exploit classes (OWASP Top 10).',
+        icon: 'tabler:world-www',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'API Security Review (REST/GraphQL)',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Validate authN/authZ, token handling, object-level authorization (BOLA), rate limits, data exposure, and abuse paths.',
+        icon: 'tabler:api',
       },
       {
-        title: 'Best Practices',
+        title: 'Mobile App Testing (Android/iOS)',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Assess client-side storage, transport security, reverse engineering resistance, and API interactions end-to-end.',
+        icon: 'tabler:device-mobile',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Cloud & Configuration Review',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Identify risky misconfigurations, exposed services, IAM weaknesses, secrets handling, and insecure storage policies.',
+        icon: 'tabler:cloud-lock',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Vulnerability Assessment + Prioritized Fix Plan',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Not just a list—each finding includes impact, reproduction steps, and a realistic remediation path with priority.',
+        icon: 'tabler:list-details',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Retest & Closure Support',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'We validate fixes, update severity, and help your team close issues with confidence—without long back-and-forth.',
+        icon: 'tabler:refresh',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
+  <!-- Why us / Deliverables -->
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Deliverables"
+    title="Reports engineers can act on"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Exploitability-first findings',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'We focus on what can realistically be abused—not theoretical edge cases that waste engineering time.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Clear reproduction steps',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Each issue includes a concise PoC path, affected endpoints, and evidence—so dev teams can reproduce quickly.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Prioritized remediation guidance',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'We map fixes to risk and effort: quick wins, structural fixes, and long-term hardening recommendations.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=2000&q=80',
+      alt: 'Security assessment and reporting',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Transparent testing. Practical outcomes.
+      </h3>
+      You get a report that makes it easy to fix issues—not just document them.
     </Fragment>
 
     <Fragment slot="bg">
@@ -139,261 +138,153 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
+  <!-- Approach / Blackbox -->
   <Content
+    id="approach"
     isAfterContent
+    tagline="Approach"
+    title="Black-box, grey-box, or authenticated testing"
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Black-box testing',
+        description:
+          'We test like an external attacker with no credentials—ideal for public-facing apps and exposed APIs.',
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Authenticated / role-based testing',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'We validate authorization boundaries across roles—critical for SaaS products with complex permission models.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Abuse-case and business-logic testing',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          'We look beyond scanners: workflows, payment logic, sensitive actions, rate limits, and privilege escalation.',
       },
       {
-        title: 'Integration of media',
+        title: 'Retest and verification',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'After fixes, we retest and confirm closure so you can ship with confidence.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=2000&q=80',
+      alt: 'Penetration testing workflow',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      Choose the style of engagement that matches your stage—MVP, growth, or compliance-driven.
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
+  <!-- Engagement steps -->
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="How an engagement works"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Scope & kickoff</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'We define targets (web/API/mobile), environments, roles, and success criteria. You’ll know exactly what’s being tested.',
+        icon: 'tabler:clipboard-check',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Testing</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Manual + automated techniques to identify vulnerabilities, exploit paths, and real impact—aligned to your threat model.',
+        icon: 'tabler:shield-search',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Report & walkthrough</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'You receive a prioritized report and a live walkthrough so engineering understands what matters and why.',
+        icon: 'tabler:file-report',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Step 4: <span class="font-medium">Fix support & retest</span>',
+        description:
+          'We validate fixes, update severities, and provide closure evidence for stakeholders.',
+        icon: 'tabler:checkup-list',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&q=80',
+      alt: 'Security testing process',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
+  <!-- FAQs -->
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    title="Common questions"
+    subtitle="A few practical answers before we start."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'What do we receive at the end of a VAPT?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'A prioritized report with severity, impact, reproduction steps, affected components, and recommended fixes. We also do a walkthrough and optional retest.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'Do you only use automated scanners?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'No. Scanners are useful for coverage, but real risk is usually in auth, logic, access control, and chaining issues—those require manual testing.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Can you test staging instead of production?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'Yes—staging is usually recommended. We’ll align scope and test windows to avoid business disruption.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Do you offer black-box testing?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Yes. We can test without credentials (black-box), with limited context (grey-box), or with full role-based accounts for deeper authorization testing.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'How do you price engagements?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'Pricing depends on scope (targets, roles, complexity). We keep it transparent and can start with a free initial scan or consultation to define scope.',
       },
     ]}
   />
 
-  <!-- Stats Widget ****************** -->
-
+  <!-- Stats (replace fake template numbers) -->
   <Stats
     stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
+      { title: 'Focus', amount: 'Web • API • Mobile' },
+      { title: 'Testing style', amount: 'Black-box to Authenticated' },
+      { title: 'Output', amount: 'Prioritized fixes' },
+      { title: 'Support', amount: 'Retest available' },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
-
+  <!-- CTA -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Book a free initial scan',
+        href: '#contact',
+        icon: 'tabler:shield-check',
+      },
+      {
+        text: 'Email us',
+        href: 'mailto:hello@zerotracex.in',
+        icon: 'tabler:mail',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Security testing that teams can actually use.
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      If you run a product, SaaS, or e-commerce platform, we’ll help you identify risks before attackers do—clearly, affordably, and transparently.
     </Fragment>
   </CallToAction>
+
+  <!-- Optional: simple anchor for CTA -->
+  <div id="contact" class="sr-only">Contact</div>
 </Layout>
